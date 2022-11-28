@@ -1,0 +1,16 @@
+.content {
+  height: 100px;
+}
+
+.footer {
+  height: 100px;
+}
+
+.header {
+  height: 100px;
+  opacity: 0.2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
