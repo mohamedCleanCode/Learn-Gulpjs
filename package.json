@@ -13,7 +13,10 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^4.0.2",
-    "gulp-sass": "^5.1.0"
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.56.1"
   },
   "dependencies": {
     "static-server": "^2.2.1"
