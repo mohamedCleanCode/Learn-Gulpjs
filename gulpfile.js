@@ -6,7 +6,8 @@ var gulp = require("gulp"),
   watch = require("gulp-watch"),
   livereload = require("gulp-livereload"),
   sourcemaps = require("gulp-sourcemaps"),
-  uglify = require("gulp-uglify");
+  uglify = require("gulp-uglify"),
+  notify = require("gulp-notify");
 
 // Html Task
 gulp.task("html", function () {
@@ -14,6 +15,7 @@ gulp.task("html", function () {
     .src("./project/index.pug")
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest("./dist"))
+    .pipe(notify("Html task is done"))
     .pipe(livereload());
 });
 
@@ -27,6 +29,7 @@ gulp.task("css", function () {
     .pipe(concat("main.css"))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/css"))
+    .pipe(notify("Css task is done"))
     .pipe(livereload());
 });
 
@@ -39,6 +42,7 @@ gulp.task("js", function () {
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/js"))
+    .pipe(notify("JS task is done"))
     .pipe(livereload());
 });
 
