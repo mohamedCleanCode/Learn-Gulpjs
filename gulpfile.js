@@ -5,7 +5,8 @@ var gulp = require("gulp"),
   pug = require("gulp-pug"),
   watch = require("gulp-watch"),
   livereload = require("gulp-livereload"),
-  sourcemaps = require("gulp-sourcemaps");
+  sourcemaps = require("gulp-sourcemaps"),
+  uglify = require("gulp-uglify");
 
 // Html Task
 gulp.task("html", function () {
@@ -35,6 +36,7 @@ gulp.task("js", function () {
     .src("./project/js/*.js")
     .pipe(sourcemaps.init())
     .pipe(concat("main.js"))
+    .pipe(uglify())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/js"))
     .pipe(livereload());
