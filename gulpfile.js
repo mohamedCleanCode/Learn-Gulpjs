@@ -1,3 +1,13 @@
+// 1- vinyl-ftp    ==> To upload dist folder to server with host live
+// 2- gulp-bable   ==> To convert js code to old code js
+// 3- gulp-replace ==> To replace any string to new string
+// 4- load-plugins ==> To download all libraries in one place
+// 5- gulp-rename  ==> to rename any files
+// 6- gulp-plumber ==> if there is error plumber can pass and continue
+
+// npm i gulp@5.6.1 to install any version from any library
+
+// Main plugins varibles
 var gulp = require("gulp"),
   concat = require("gulp-concat"),
   prefix = require("gulp-autoprefixer"),
